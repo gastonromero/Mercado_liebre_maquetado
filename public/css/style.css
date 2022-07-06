@@ -88,7 +88,9 @@ nav ul a {
 }
 
 h3 {
-    font-size: 24px;
+    font-size: var(--titulares);
+    color: var(--gris-oscuro);
+    margin: 1rem 0;
 }
 
 .product img {
@@ -100,7 +102,7 @@ h3 {
 }
 
 .desc {
-    font-size: 16px;
+    font-size: var(--descuentos);
 }
 
 .descripcion {
