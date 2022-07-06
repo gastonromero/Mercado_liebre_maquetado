@@ -88,7 +88,9 @@ nav ul a {
 }
 
 h3 {
-    font-size: 24px;
+    font-size: var(--titulares);
+    color: var(--gris-oscuro);
+    margin: 1rem 0;
 }
 
 .product img {
@@ -100,7 +102,7 @@ h3 {
 }
 
 .desc {
-    font-size: 16px;
+    font-size: var(--descuentos);
 }
 
 .descripcion {
@@ -139,4 +141,39 @@ footer section p {
     font-size: 12px;
     margin-left: 20px;
     margin-top: 40px;
+}
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.product {
+    margin-bottom: 10px;
+}
+
+.box {
+    background-color: white;
+    border-top: 1px solid var(--gris-claro);
+    padding: 15px;
+}
+
+.box i {
+    border: 1px solid var(--verde);
+    border-radius: 50%;
+    padding: 0.8rem 0.7rem;
+}
+
+.box i, .box .descuento {
+    color: var(--verde);
+}
+
+.box .desc {
+    margin-bottom: 1rem;
 }
