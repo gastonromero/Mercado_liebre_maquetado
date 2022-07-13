@@ -40,12 +40,12 @@ header img {
 nav input {
     margin-left: 20px;
     margin-bottom: 2px;
-    height: 25px;
+    height: 20px;
     width: 175px;
 }
 
-.search_icon button  {
-    margin-left: 20px;
+.search_icon {
+    margin-left: 1.5rem;
 }
 
 .buy {
@@ -59,10 +59,12 @@ nav input {
 nav ul a {
     text-decoration: none;
     color: black;
+    display: none;
+    list-style: none;
 }
 
-.menu1 {
-    margin-bottom: 17px;
+.menu2 {
+    display: none;
 }
 
 .register a, .login a, .basket a {
@@ -73,7 +75,7 @@ nav ul a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0 2rem 0;
+    padding: 0 0 2rem 0;
 }
 .burguer-menu i{
     background-color: var(--celeste);
@@ -83,8 +85,8 @@ nav ul a {
     border-radius: 10px;
 }
 
-.banner {
-    display: none;
+.banner img {
+  width: 100%;
 }
 
 h3 {
@@ -175,4 +177,58 @@ main {
 
 .box .desc {
     margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 361px){
+    .banner{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 769px){
+    nav ul a {
+        display: flex;
+    }
+
+    .menu2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .buy  {
+        text-align: center;
+    }
+
+    nav {
+        padding: 1rem;
+    }
+
+    .search_icon {
+        margin-left: 0px;
+    }
+    
+    .burguer-menu {
+        display: none;
+    }
+
+    .banner  {
+       display: flex;
+       align-items: center;
+
+    }
+
+    .logo-header {
+        margin-left: 1.7rem;
+        padding: 2rem 0 1rem 0;
+        width: 30%;
+    }
+
+    .product-info {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main {
+        width: 90%;
+    }
 }
