@@ -27,33 +27,68 @@
 body {
     background-color: var(--gris-claro);
 }
+h3 {
+    font-size: var(--titulo);
+    color: var(--gris-oscuro);
+    margin: 1rem 0;
+}
+
+p.precios {
+    font-size: var(--precio);
+}
+
+p.desc {
+    font-size: var(--desc);
+}
+
+.banner img{
+    width: 100%;
+}
 
 header {
     background-color: var(--amarillo);
 }
-
-header img {
-    width: 200px;
-    margin: 30px 0px 20px 35px;
+.logo-header {
+    padding: 2rem 0 1rem 0;
+    width: 50%;
+    margin-right: 10px;
 }
 
-nav input {
-    margin-left: 20px;
-    margin-bottom: 2px;
-    height: 20px;
-    width: 175px;
+.search-input {
+    width: 50%;
+    position: relative;
 }
 
-.search_icon {
-    margin-left: 1.5rem;
+.search-input input {
+    width: 90%;
+    border: none;
+    padding: 8px 5px;
+    border-radius: 5px;
 }
 
-.buy {
-    margin: 20px 0px 25px 50px;
+.search-input button {
+    position: absolute;
+    background: #fff;
+    padding: 0 4px;
+    border: none;
+    right: 17px;
+    top: 10px;
+    color: var(--gris-oscuro);
 }
 
-.buy p {
-    display: inline-block;
+.header-text {
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
 nav ul a {
@@ -61,14 +96,6 @@ nav ul a {
     color: black;
     display: none;
     list-style: none;
-}
-
-.menu2 {
-    display: none;
-}
-
-.register a, .login a, .basket a {
-    display: inline-block;
 }
 
 .burguer-menu {
@@ -85,66 +112,47 @@ nav ul a {
     border-radius: 10px;
 }
 
-.banner img {
-  width: 100%;
-}
-
-h3 {
-    font-size: var(--titulares);
-    color: var(--gris-oscuro);
-    margin: 1rem 0;
-}
-
-.product img {
+.product-info img {
     width: 100%;
-}
-
-.precio {
-    font-size: 18px;
-}
-
-.desc {
-    font-size: var(--descuentos);
-}
-
-.descripcion {
-    font-size: 16px;
 }
 
 footer {
     background-color: white;
-    margin: 5px 5px 7px 5px;
+    margin: 8px;
 }
 
-footer section  {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin-top: 60pxc;
+footer h4 {
+    color: var(--gris-oscuro);
+    font-size: 1.1rem;
 }
 
-footer section i {
-    margin-top: 50px;
-    margin-bottom: 15px;
-    font-size: 2em;
+.section__footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    text-align: center;
+}
+
+.section__footer i {
     color: var(--celeste);
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-footer section p {
-    font-size: 12px;
+footer p.copy{
     text-align: center;
+    padding: 2rem 0;   
 }
 
-.security {
-    margin-bottom: 40px;
+footer .article-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
 }
-
-.copyright {
-    text-align: center;
-    padding: 2rem 0;
-}
-
-/* Main */
 
 main {
     display: flex;
@@ -155,7 +163,7 @@ main {
     margin: 0 auto;
 }
 
-.product {
+.product-info {
     margin-bottom: 10px;
 }
 
@@ -163,72 +171,135 @@ main {
     background-color: white;
     border-top: 1px solid var(--gris-claro);
     padding: 15px;
+    position: relative;
 }
 
 .box i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
     border: 1px solid var(--verde);
+    background-color: #fff;
     border-radius: 50%;
-    padding: 0.8rem 0.7rem;
+    position: absolute;
+    right: 20px;
+    top: -15px;
 }
 
-.box i, .box .descuento {
+.box i,
+.box .descuento {
     color: var(--verde);
 }
 
-.box .desc {
-    margin-bottom: 1rem;
+.box .flex {
+    display: flex;
+    align-items: center;
 }
 
-@media screen and (min-width: 361px){
-    .banner{
-        display: none;
-    }
+.box .flex .descuento {
+    width: 70%;
 }
 
+.box .flex .precios {
+    width: 30%;
+}
+
+.descripcion {
+    margin: 10px 0;
+}
+
+/* MEDIA QUERYS */
 
 @media screen and (min-width: 769px){
     nav ul a {
         display: flex;
     }
 
-    .menu2 {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .buy  {
-        text-align: center;
-    }
-
     nav {
         padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    .search_icon {
-        margin-left: 0px;
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 45%;
     }
-    
+
+    nav ul a i {
+        margin-left: 5px;
+    }
+
     .burguer-menu {
         display: none;
     }
 
-    .banner  {
-       display: flex;
-       align-items: center;
-
+    .banner img {
+        width: 100%;
     }
 
     .logo-header {
         margin-left: 1.7rem;
         padding: 2rem 0 1rem 0;
-        width: 30%;
+        width: 45%;
     }
 
     .product-info {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
+    .articles {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .product-info {
+        width: 45%;
+    }
+
+    .encabezado {
+        width: 62%;
+        justify-content: space-between;
+    }
+    .logo-input-text {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .search-input button {
+        right: 34px;
+    }
+
+    .box .flex .precios {
+        width: 50%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
     main {
-        width: 90%;
+        width: 100%;
+    }
+    .articles {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+    }
+
+    .product-info {
+        width: 20%;
+    }
+
+    h3 {
+        margin-left: 3rem;
     }
 }
